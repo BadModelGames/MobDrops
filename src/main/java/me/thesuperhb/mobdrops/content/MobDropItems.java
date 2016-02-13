@@ -104,17 +104,15 @@ public class MobDropItems {
 		wolfLeggings = new WolfArmor(MDArmorMaterial.WOLF, ItemID.wolfPantsID, 2).setUnlocalizedName("wolf_leggings").setCreativeTab(mD);
 		wolfBoots = new WolfArmor(MDArmorMaterial.WOLF, ItemID.wolfShoesID, 3).setUnlocalizedName("wolf_boots").setCreativeTab(mD);
 		
+		// TODO Armor Textures
 		horseHelmet = new HorseArmor(MDArmorMaterial.HORSE, ItemID.horseHelmetID, 0).setUnlocalizedName("horse_helmet").setCreativeTab(mD);
 		horseChestplate = new HorseArmor(MDArmorMaterial.HORSE, ItemID.horseChestplateID, 1).setUnlocalizedName("horse_chestplate").setCreativeTab(mD);
 		horseLeggings = new HorseArmor(MDArmorMaterial.HORSE, ItemID.horsePantsID, 2).setUnlocalizedName("horse_leggings").setCreativeTab(mD);
 		horseBoots = new HorseArmor(MDArmorMaterial.HORSE, ItemID.horseShoesID, 3).setUnlocalizedName("horse_boots").setCreativeTab(mD);
-		
 		ocelotHelmet = new OcelotArmor(MDArmorMaterial.OCELOT, ItemID.ocelotHelmetID, 0).setUnlocalizedName("ocelot_helmet").setCreativeTab(mD);
 		ocelotChestplate = new OcelotArmor(MDArmorMaterial.OCELOT, ItemID.ocelotChestplateID, 1).setUnlocalizedName("ocelot_chestplate").setCreativeTab(mD);
 		ocelotLeggings = new OcelotArmor(MDArmorMaterial.OCELOT, ItemID.ocelotPantsID, 2).setUnlocalizedName("ocelot_leggings").setCreativeTab(mD);
 		ocelotBoots = new OcelotArmor(MDArmorMaterial.OCELOT, ItemID.ocelotShoesID, 3).setUnlocalizedName("ocelot_boots").setCreativeTab(mD);
-		
-		// TODO Armor Textures
 		mooHelmet = new MooArmor(MDArmorMaterial.MOO, ItemID.mooHelmetID, 0).setUnlocalizedName("moo_helmet"); //.setCreativeTab(mD); //TODO Textures
 		mooChestplate = new MooArmor(MDArmorMaterial.MOO, ItemID.mooChestplateID, 1).setUnlocalizedName("moo_chestplate"); //.setCreativeTab(mD); //TODO Textures
 		mooLeggings = new MooArmor(MDArmorMaterial.MOO, ItemID.mooPantsID, 2).setUnlocalizedName("moo_leggings"); //.setCreativeTab(mD); //TODO Textures
