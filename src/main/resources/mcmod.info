@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mobdrops",
+  "name": "MobDrops",
+  "description": "MobDrops add more realistic mob drops to minecraft for example bones from animals not just skeletons!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "http://www.planetminecraft.com/mod/125-mobdrops/",
+  "authorList": ["JustKilling"],
+  "credits": "AlienXtream, Gunlaser, The Texture Wizard, Joe_TheMiner.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
