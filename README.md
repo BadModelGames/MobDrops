@@ -4,6 +4,7 @@ Welcome to the MobDrops GitHub! After all these years I've finally made it oepn 
 http://www.planetminecraft.com/mod/125-mobdrops/
 
 <h3>License</h3>
-If you plan on using anything from MobDrops please follow the terms of the GNU GENERAL PUBLIC LICENSE.
+If you plan on using anything from MobDrops please follow the terms of The MIT License.
 
-<a href="https://github.com/BadModelGames/MobDrops/blob/master/LICENSE.md">GNU GENERAL PUBLIC LICENSE</a>
+<a href="https://github.com/BadModelGames/MobDrops/blob/master/LICENSE.md">The MIT License</a>
+<a href="http://choosealicense.com/licenses/mit/">More Information on the MIT License</a>
