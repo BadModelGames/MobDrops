@@ -1,7 +1,5 @@
 package me.superhb.mobdrops.gui;
 
-import com.sun.prism.paint.Color;
-
 import me.superhb.mobdrops.Refrence;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
