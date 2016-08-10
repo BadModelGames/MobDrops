@@ -1,0 +1,6 @@
+{
+    "parent": "mobdrops:item/blaze_bow",
+    "textures": {
+        "layer0": "mobdrops:items/blaze_bow_pulling_1"
+    }
+}
