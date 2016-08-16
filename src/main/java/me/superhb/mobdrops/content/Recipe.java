@@ -7,7 +7,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class Recipe {
 	public static void registerRecipe () {
-		
 		// Crafting Table
 		GameRegistry.addRecipe(new ItemStack(MDItems.blazeShard, 2), new Object[] { " f ", "fbf", " f ", 'f', Items.FLINT, 'b', Items.BLAZE_ROD });
 		GameRegistry.addRecipe(new ItemStack(MDItems.gooSword, 1), new Object[] { "g", "g", "s", 'g', MDItems.goo, 's', Items.STICK });

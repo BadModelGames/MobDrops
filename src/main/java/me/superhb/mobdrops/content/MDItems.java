@@ -24,7 +24,7 @@ public class MDItems {
 	creeperSkin,
 	wolfSkin,
 	redLeather,
-	batFur, batEar, batEye, batWing,
+	batFur, batEar, batEye, batWing, batSuit,
 	enderScale, enderTear,
 	goo, magmaGoo,
 	ocelotFur, // used to make fur stole (fur around neck with head and legs)
@@ -62,17 +62,18 @@ public class MDItems {
 		creeperSkin = new Item().setUnlocalizedName("creeper_skin").setCreativeTab(tab);
 		wolfSkin = new Item().setUnlocalizedName("wolf_skin").setCreativeTab(tab);
 		redLeather = new Item().setUnlocalizedName("red_leather").setCreativeTab(tab);
-		batFur = new Item().setUnlocalizedName("bat_fur");//.setCreativeTab(tab);
-		batEar = new Item().setUnlocalizedName("bat_ear");//.setCreativeTab(tab);
-		batEye = new Item().setUnlocalizedName("bat_eye");//.setCreativeTab(tab);
-		batWing = new Item().setUnlocalizedName("bat_wing");//.setCreativeTab(tab);
+		batFur = new Item().setUnlocalizedName("bat_fur").setCreativeTab(tab);
+		batEar = new Item().setUnlocalizedName("bat_ear").setCreativeTab(tab);
+		batEye = new Item().setUnlocalizedName("bat_eye").setCreativeTab(tab);
+		batWing = new Item().setUnlocalizedName("bat_wing").setCreativeTab(tab);
 		enderScale = new Item().setUnlocalizedName("ender_scale").setCreativeTab(tab);
-		enderTear = new Item().setUnlocalizedName("ender_tear");//.setCreativeTab(tab);
+		enderTear = new Item().setUnlocalizedName("ender_tear").setCreativeTab(tab);
 		goo = new Item().setUnlocalizedName("goo").setCreativeTab(tab);
 		magmaGoo = new Item().setUnlocalizedName("magma_goo").setCreativeTab(tab);
 		ocelotFur = new Item().setUnlocalizedName("ocelot_fur").setCreativeTab(tab);
 		zombieBrain = new Item().setUnlocalizedName("zombie_brain").setCreativeTab(tab);
 		blazeShard = new Item().setUnlocalizedName("blaze_shard").setCreativeTab(tab);
+		batSuit = new MDBatSuit(MDMaterial.WOLF, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("bat_suit").setCreativeTab(tab);
 		
 		// Tools
 		spiderLeg = new MDSword(MDMaterial.SPIDER).setUnlocalizedName("spider_leg").setCreativeTab(tab);
@@ -104,21 +105,21 @@ public class MDItems {
 		creeperBoots = new MDArmor(MDMaterial.CREEPER, 0, EntityEquipmentSlot.FEET).setUnlocalizedName("creeper_boots").setCreativeTab(tab);
 		wolfHelmet = new MDArmor(MDMaterial.WOLF, 0, EntityEquipmentSlot.HEAD).setUnlocalizedName("wolf_helmet").setCreativeTab(tab);
 		wolfChestplate = new MDArmor(MDMaterial.WOLF, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("wolf_chestplate").setCreativeTab(tab);
-		furStole = new MDArmor(MDMaterial.WOLF, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("fur_stole");//.setCreativeTab(tab); // new material?
+		furStole = new MDArmor(MDMaterial.WOLF, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("fur_stole").setCreativeTab(tab); // new material?
 		wolfLeggings = new MDArmor(MDMaterial.WOLF, 0, EntityEquipmentSlot.LEGS).setUnlocalizedName("wolf_leggings").setCreativeTab(tab);
 		wolfBoots = new MDArmor(MDMaterial.WOLF, 0, EntityEquipmentSlot.FEET).setUnlocalizedName("wolf_boots").setCreativeTab(tab);
 		ocelotHelmet = new MDArmor(MDMaterial.OCELOT, 0, EntityEquipmentSlot.HEAD).setUnlocalizedName("ocelot_helmet").setCreativeTab(tab);
 		ocelotChestplate = new MDArmor(MDMaterial.OCELOT, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("ocelot_chestplate").setCreativeTab(tab);
 		ocelotLeggings = new MDArmor(MDMaterial.OCELOT, 0, EntityEquipmentSlot.LEGS).setUnlocalizedName("ocelot_leggings").setCreativeTab(tab);
 		ocelotBoots = new MDArmor(MDMaterial.OCELOT, 0, EntityEquipmentSlot.FEET).setUnlocalizedName("ocelot_boots").setCreativeTab(tab);
-		mooHelmet = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.HEAD).setUnlocalizedName("moo_helmet");//.setCreativeTab(tab);
-		mooChestplate = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("moo_chestplate");//.setCreativeTab(tab);
-		mooLeggings = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.LEGS).setUnlocalizedName("moo_leggings");//.setCreativeTab(tab);
-		mooBoots = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.FEET).setUnlocalizedName("moo_boots");//.setCreativeTab(tab);
-		enderHelmet = new MDArmor(MDMaterial.ENDER, 0, EntityEquipmentSlot.HEAD).setUnlocalizedName("ender_helmet");//.setCreativeTab(tab);
-		enderChestplate = new MDArmor(MDMaterial.ENDER, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("ender_chestplate");//.setCreativeTab(tab);
-		enderLeggings = new MDArmor(MDMaterial.ENDER, 0, EntityEquipmentSlot.LEGS).setUnlocalizedName("ender_leggings");//.setCreativeTab(tab);
-		enderBoots = new MDArmor(MDMaterial.ENDER, 0, EntityEquipmentSlot.FEET).setUnlocalizedName("ender_boots");//.setCreativeTab(tab);
+		mooHelmet = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.HEAD).setUnlocalizedName("moo_helmet").setCreativeTab(tab);
+		mooChestplate = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("moo_chestplate").setCreativeTab(tab);
+		mooLeggings = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.LEGS).setUnlocalizedName("moo_leggings").setCreativeTab(tab);
+		mooBoots = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.FEET).setUnlocalizedName("moo_boots").setCreativeTab(tab);
+		enderHelmet = new MDArmor(MDMaterial.ENDER, 0, EntityEquipmentSlot.HEAD).setUnlocalizedName("ender_helmet").setCreativeTab(tab);
+		enderChestplate = new MDArmor(MDMaterial.ENDER, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("ender_chestplate").setCreativeTab(tab);
+		enderLeggings = new MDArmor(MDMaterial.ENDER, 0, EntityEquipmentSlot.LEGS).setUnlocalizedName("ender_leggings").setCreativeTab(tab);
+		enderBoots = new MDArmor(MDMaterial.ENDER, 0, EntityEquipmentSlot.FEET).setUnlocalizedName("ender_boots").setCreativeTab(tab);
 		blazeHelmet = new MDArmor(MDMaterial.BLAZE, 0, EntityEquipmentSlot.HEAD).setUnlocalizedName("blaze_helmet").setCreativeTab(tab);
 		blazeChestplate = new MDArmor(MDMaterial.BLAZE, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("blaze_chestplate").setCreativeTab(tab);
 		blazeLeggings = new MDArmor(MDMaterial.BLAZE, 0, EntityEquipmentSlot.LEGS).setUnlocalizedName("blaze_leggings").setCreativeTab(tab);
@@ -133,12 +134,8 @@ public class MDItems {
 		MDMaterial.BLAZE.customCraftingMaterial = blazeShard;
 		
 		/*
-		textures/items/ocelot_helmet.png
-		textures/items/ocelot_leggings.png
-		textures/items/ocelot_chestplate.png
 		textures/items/fur_stole.png
 		textures/items/moo_leggings.png
-		textures/items/ocelot_boots.png
 		textures/items/moo_chestplate.png
 		textures/items/moo_boots.png
 		textures/items/moo_helmet.png
@@ -150,17 +147,20 @@ public class MDItems {
 		GameRegistry.register(creeperSkin.setRegistryName(creeperSkin.getUnlocalizedName().substring(5)));
 		GameRegistry.register(wolfSkin.setRegistryName(wolfSkin.getUnlocalizedName().substring(5)));
 		GameRegistry.register(redLeather.setRegistryName(redLeather.getUnlocalizedName().substring(5)));
+		/*
 		GameRegistry.register(batFur.setRegistryName(batFur.getUnlocalizedName().substring(5)));
 		GameRegistry.register(batEar.setRegistryName(batEar.getUnlocalizedName().substring(5)));
 		GameRegistry.register(batEye.setRegistryName(batEye.getUnlocalizedName().substring(5)));
 		GameRegistry.register(batWing.setRegistryName(batWing.getUnlocalizedName().substring(5)));
+		*/
 		GameRegistry.register(enderScale.setRegistryName(enderScale.getUnlocalizedName().substring(5)));
-		GameRegistry.register(enderTear.setRegistryName(enderTear.getUnlocalizedName().substring(5)));
+		//GameRegistry.register(enderTear.setRegistryName(enderTear.getUnlocalizedName().substring(5)));
 		GameRegistry.register(goo.setRegistryName(goo.getUnlocalizedName().substring(5)));
 		GameRegistry.register(magmaGoo.setRegistryName(magmaGoo.getUnlocalizedName().substring(5)));
 		GameRegistry.register(ocelotFur.setRegistryName(ocelotFur.getUnlocalizedName().substring(5)));
 		GameRegistry.register(zombieBrain.setRegistryName(zombieBrain.getUnlocalizedName().substring(5)));
 		GameRegistry.register(blazeShard.setRegistryName(blazeShard.getUnlocalizedName().substring(5)));
+		//GameRegistry.register(batSuit.setRegistryName(batSuit.getUnlocalizedName().substring(5)));
 		
 		// Tools
 		GameRegistry.register(spiderLeg.setRegistryName(spiderLeg.getUnlocalizedName().substring(5)));
@@ -191,13 +191,14 @@ public class MDItems {
 		GameRegistry.register(creeperBoots.setRegistryName(creeperBoots.getUnlocalizedName().substring(5)));
 		GameRegistry.register(wolfHelmet.setRegistryName(wolfHelmet.getUnlocalizedName().substring(5)));
 		GameRegistry.register(wolfChestplate.setRegistryName(wolfChestplate.getUnlocalizedName().substring(5)));
-		GameRegistry.register(furStole.setRegistryName(furStole.getUnlocalizedName().substring(5)));
+		//GameRegistry.register(furStole.setRegistryName(furStole.getUnlocalizedName().substring(5)));
 		GameRegistry.register(wolfLeggings.setRegistryName(wolfLeggings.getUnlocalizedName().substring(5)));
 		GameRegistry.register(wolfBoots.setRegistryName(wolfBoots.getUnlocalizedName().substring(5)));
 		GameRegistry.register(ocelotHelmet.setRegistryName(ocelotHelmet.getUnlocalizedName().substring(5)));
 		GameRegistry.register(ocelotChestplate.setRegistryName(ocelotChestplate.getUnlocalizedName().substring(5)));
 		GameRegistry.register(ocelotLeggings.setRegistryName(ocelotLeggings.getUnlocalizedName().substring(5)));
 		GameRegistry.register(ocelotBoots.setRegistryName(ocelotBoots.getUnlocalizedName().substring(5)));
+		/*
 		GameRegistry.register(mooHelmet.setRegistryName(mooHelmet.getUnlocalizedName().substring(5)));
 		GameRegistry.register(mooChestplate.setRegistryName(mooChestplate.getUnlocalizedName().substring(5)));
 		GameRegistry.register(mooLeggings.setRegistryName(mooLeggings.getUnlocalizedName().substring(5)));
@@ -206,6 +207,7 @@ public class MDItems {
 		GameRegistry.register(enderChestplate.setRegistryName(enderChestplate.getUnlocalizedName().substring(5)));
 		GameRegistry.register(enderLeggings.setRegistryName(enderLeggings.getUnlocalizedName().substring(5)));
 		GameRegistry.register(enderBoots.setRegistryName(enderBoots.getUnlocalizedName().substring(5)));
+		*/
 		GameRegistry.register(blazeHelmet.setRegistryName(blazeHelmet.getUnlocalizedName().substring(5)));
 		GameRegistry.register(blazeChestplate.setRegistryName(blazeChestplate.getUnlocalizedName().substring(5)));
 		GameRegistry.register(blazeLeggings.setRegistryName(blazeLeggings.getUnlocalizedName().substring(5)));
@@ -217,17 +219,20 @@ public class MDItems {
 		registerRender(creeperSkin);
 		registerRender(wolfSkin);
 		registerRender(redLeather);
+		/*
 		registerRender(batFur);
 		registerRender(batEar);
 		registerRender(batEye);
 		registerRender(batWing);
+		*/
 		registerRender(enderScale);
-		registerRender(enderTear);
+		//registerRender(enderTear);
 		registerRender(goo);
 		registerRender(magmaGoo);
 		registerRender(ocelotFur);
 		registerRender(zombieBrain);
 		registerRender(blazeShard);
+		registerRender(batSuit);
 		
 		// Tools
 		registerRender(spiderLeg);
@@ -258,13 +263,14 @@ public class MDItems {
 		registerRender(creeperBoots);
 		registerRender(wolfHelmet);
 		registerRender(wolfChestplate);
-		registerRender(furStole);
+		//registerRender(furStole);
 		registerRender(wolfLeggings);
 		registerRender(wolfBoots);
 		registerRender(ocelotHelmet);
 		registerRender(ocelotChestplate);
 		registerRender(ocelotLeggings);
 		registerRender(ocelotBoots);
+		/*
 		registerRender(mooHelmet);
 		registerRender(mooChestplate);
 		registerRender(mooLeggings);
@@ -273,6 +279,7 @@ public class MDItems {
 		registerRender(enderChestplate);
 		registerRender(enderLeggings);
 		registerRender(enderBoots);
+		*/
 		registerRender(blazeHelmet);
 		registerRender(blazeChestplate);
 		registerRender(blazeLeggings);

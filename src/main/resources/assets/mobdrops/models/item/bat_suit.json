@@ -1,0 +1,14 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "mobdrops:items/bat_suit"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "broken": 1
+            },
+            "model": "mobdrops:item/broken_bat_suit"
+        }
+    ]
+}
