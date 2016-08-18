@@ -134,11 +134,9 @@ public class MDItems {
 		MDMaterial.BLAZE.customCraftingMaterial = blazeShard;
 		
 		/*
-		textures/items/fur_stole.png
-		textures/items/moo_leggings.png
-		textures/items/moo_chestplate.png
-		textures/items/moo_boots.png
-		textures/items/moo_helmet.png
+		fur stole item and model needed
+		moo armor models textures needed
+		ender armor models textures needed
 		*/
 	}
 	

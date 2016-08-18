@@ -1,20 +1,19 @@
 package me.superhb.mobdrops;
 
+import java.util.ArrayList;
+import java.util.List;
+import com.google.common.collect.Lists;
 import me.superhb.mobdrops.content.MDBlocks;
 import me.superhb.mobdrops.content.MDItems;
 import me.superhb.mobdrops.handler.CreeperViewHandler;
 import me.superhb.mobdrops.handler.LivingDropsHandler;
-import me.superhb.mobdrops.loot.MDLootTable;
 import me.superhb.mobdrops.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.storage.loot.LootEntryItem;
-import net.minecraft.world.storage.loot.LootPool;
-import net.minecraft.world.storage.loot.LootTableList;
-import net.minecraft.world.storage.loot.conditions.LootCondition;
-import net.minecraft.world.storage.loot.functions.LootFunction;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.LootTableLoadEvent;
