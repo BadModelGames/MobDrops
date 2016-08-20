@@ -9,6 +9,7 @@ import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -53,7 +54,6 @@ public class MDItems {
 	creeperHelmet, creeperViewHelmet, creeperChestplate, creeperLeggings, creeperBoots,
 	wolfHelmet, wolfChestplate, furStole, wolfLeggings, wolfBoots,
 	ocelotHelmet, ocelotChestplate, ocelotLeggings, ocelotBoots,
-	mooHelmet, mooChestplate, mooLeggings, mooBoots,
 	enderHelmet, enderChestplate, enderLeggings, enderBoots,
 	blazeHelmet, blazeChestplate, blazeLeggings, blazeBoots;
 	
@@ -112,10 +112,6 @@ public class MDItems {
 		ocelotChestplate = new MDArmor(MDMaterial.OCELOT, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("ocelot_chestplate").setCreativeTab(tab);
 		ocelotLeggings = new MDArmor(MDMaterial.OCELOT, 0, EntityEquipmentSlot.LEGS).setUnlocalizedName("ocelot_leggings").setCreativeTab(tab);
 		ocelotBoots = new MDArmor(MDMaterial.OCELOT, 0, EntityEquipmentSlot.FEET).setUnlocalizedName("ocelot_boots").setCreativeTab(tab);
-		mooHelmet = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.HEAD).setUnlocalizedName("moo_helmet").setCreativeTab(tab);
-		mooChestplate = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("moo_chestplate").setCreativeTab(tab);
-		mooLeggings = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.LEGS).setUnlocalizedName("moo_leggings").setCreativeTab(tab);
-		mooBoots = new MDArmor(MDMaterial.MOO, 0, EntityEquipmentSlot.FEET).setUnlocalizedName("moo_boots").setCreativeTab(tab);
 		enderHelmet = new MDArmor(MDMaterial.ENDER, 0, EntityEquipmentSlot.HEAD).setUnlocalizedName("ender_helmet").setCreativeTab(tab);
 		enderChestplate = new MDArmor(MDMaterial.ENDER, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("ender_chestplate").setCreativeTab(tab);
 		enderLeggings = new MDArmor(MDMaterial.ENDER, 0, EntityEquipmentSlot.LEGS).setUnlocalizedName("ender_leggings").setCreativeTab(tab);
@@ -129,14 +125,14 @@ public class MDItems {
 		MDMaterial.CREEPER.customCraftingMaterial = creeperSkin;
 		MDMaterial.WOLF.customCraftingMaterial = wolfSkin;
 		MDMaterial.OCELOT.customCraftingMaterial = ocelotFur;
-		MDMaterial.MOO.customCraftingMaterial = redLeather;
 		MDMaterial.ENDER.customCraftingMaterial = enderScale;
 		MDMaterial.BLAZE.customCraftingMaterial = blazeShard;
 		
+		// TODO Use red leather when leather armor is dyed red
+		//ArmorMaterial.LEATHER.customCraftingMaterial = redLeather;
+		
 		/*
 		fur stole item and model needed
-		moo armor models textures needed
-		ender armor models textures needed
 		*/
 	}
 	
@@ -196,16 +192,10 @@ public class MDItems {
 		GameRegistry.register(ocelotChestplate.setRegistryName(ocelotChestplate.getUnlocalizedName().substring(5)));
 		GameRegistry.register(ocelotLeggings.setRegistryName(ocelotLeggings.getUnlocalizedName().substring(5)));
 		GameRegistry.register(ocelotBoots.setRegistryName(ocelotBoots.getUnlocalizedName().substring(5)));
-		/*
-		GameRegistry.register(mooHelmet.setRegistryName(mooHelmet.getUnlocalizedName().substring(5)));
-		GameRegistry.register(mooChestplate.setRegistryName(mooChestplate.getUnlocalizedName().substring(5)));
-		GameRegistry.register(mooLeggings.setRegistryName(mooLeggings.getUnlocalizedName().substring(5)));
-		GameRegistry.register(mooBoots.setRegistryName(mooBoots.getUnlocalizedName().substring(5)));
 		GameRegistry.register(enderHelmet.setRegistryName(enderHelmet.getUnlocalizedName().substring(5)));
 		GameRegistry.register(enderChestplate.setRegistryName(enderChestplate.getUnlocalizedName().substring(5)));
 		GameRegistry.register(enderLeggings.setRegistryName(enderLeggings.getUnlocalizedName().substring(5)));
 		GameRegistry.register(enderBoots.setRegistryName(enderBoots.getUnlocalizedName().substring(5)));
-		*/
 		GameRegistry.register(blazeHelmet.setRegistryName(blazeHelmet.getUnlocalizedName().substring(5)));
 		GameRegistry.register(blazeChestplate.setRegistryName(blazeChestplate.getUnlocalizedName().substring(5)));
 		GameRegistry.register(blazeLeggings.setRegistryName(blazeLeggings.getUnlocalizedName().substring(5)));
@@ -268,16 +258,10 @@ public class MDItems {
 		registerRender(ocelotChestplate);
 		registerRender(ocelotLeggings);
 		registerRender(ocelotBoots);
-		/*
-		registerRender(mooHelmet);
-		registerRender(mooChestplate);
-		registerRender(mooLeggings);
-		registerRender(mooBoots);
 		registerRender(enderHelmet);
 		registerRender(enderChestplate);
 		registerRender(enderLeggings);
 		registerRender(enderBoots);
-		*/
 		registerRender(blazeHelmet);
 		registerRender(blazeChestplate);
 		registerRender(blazeLeggings);

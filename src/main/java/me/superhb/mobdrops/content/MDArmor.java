@@ -28,13 +28,9 @@ public class MDArmor extends ItemArmor {
 		else if (stack.getItem() == MDItems.wolfLeggings)
 			return Refrence.MODID + ":textures/models/armor/wolf_2.png";
 		else if (stack.getItem() == MDItems.ocelotHelmet || stack.getItem() == MDItems.ocelotChestplate || stack.getItem() == MDItems.ocelotBoots)
-			return Refrence.MODID + ":textures/models/armor/ender_1.png";
+			return Refrence.MODID + ":textures/models/armor/ocelot_1.png";
 		else if (stack.getItem() == MDItems.ocelotLeggings)
-			return Refrence.MODID + ":textures/models/armor/ender_2.png";
-		else if (stack.getItem() == MDItems.mooHelmet || stack.getItem() == MDItems.mooChestplate || stack.getItem() == MDItems.mooBoots)
-			return Refrence.MODID + ":textures/models/armor/moo_1.png";
-		else if (stack.getItem() == MDItems.mooLeggings)
-			return Refrence.MODID + ":textures/models/armor/moo_2.png";
+			return Refrence.MODID + ":textures/models/armor/ocelot_2.png";
 		else if (stack.getItem() == MDItems.enderHelmet || stack.getItem() == MDItems.enderChestplate || stack.getItem() == MDItems.enderBoots)
 			return Refrence.MODID + ":textures/models/armor/ender_1.png";
 		else if (stack.getItem() == MDItems.enderLeggings)

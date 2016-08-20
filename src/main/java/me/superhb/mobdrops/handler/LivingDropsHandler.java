@@ -36,7 +36,7 @@ public class LivingDropsHandler {
 			} else if (event.getName().equals(LootTableList.ENTITIES_MUSHROOM_COW)) {
 				LootPool main = event.getTable().getPool("main");
 				main.removeEntry("minecraft:leather");
-				main.addEntry(new LootEntryItem(MDItems.redLeather, 1, 0, new LootFunction[] { new SetCount(new LootCondition[0], new RandomValueRange(0, 2)), new LootingEnchantBonus(new LootCondition[0], new RandomValueRange(0, 1), 1) }, new LootCondition[0], Refrence.MODID + ":redLeather"));
+				main.addEntry(new LootEntryItem(MDItems.redLeather, 1, 0, new LootFunction[] { new SetCount(new LootCondition[0], new RandomValueRange(0, 2)), new LootingEnchantBonus(new LootCondition[0], new RandomValueRange(0, 1), 1) }, new LootCondition[0], Refrence.MODID + ":red_leather"));
 				
 				event.getTable().addPool(new LootPool(new LootEntry[0], new LootCondition[0], new RandomValueRange(1), new RandomValueRange(0), "mobdrops"));
 				LootPool pool = event.getTable().getPool("mobdrops");
@@ -51,6 +51,7 @@ public class LivingDropsHandler {
 				event.getTable().addPool(new LootPool(new LootEntry[0], new LootCondition[0], new RandomValueRange(1), new RandomValueRange(0), "mobdrops"));
 				LootPool pool = event.getTable().getPool("mobdrops");
 				pool.addEntry(new LootEntryItem(Items.BONE, 1, 0, new LootFunction[] { new SetCount(new LootCondition[0], new RandomValueRange(1, 2)), new LootingEnchantBonus(new LootCondition[0], new RandomValueRange(0, 1), 1) }, new LootCondition[0], Refrence.MODID + ":bone"));
+				pool.addEntry(new LootEntryItem(MDItems.creeperSkin, 1, 0, new LootFunction[] { new SetCount(new LootCondition[0], new RandomValueRange(0, 2)), new LootingEnchantBonus(new LootCondition[0], new RandomValueRange(0, 1), 1) }, new LootCondition[0], Refrence.MODID + ":creeper_skin"));
 			} else if (event.getName().equals(LootTableList.ENTITIES_SPIDER)) {
 				event.getTable().addPool(new LootPool(new LootEntry[0], new LootCondition[0], new RandomValueRange(1), new RandomValueRange(0), "mobdrops"));
 				LootPool pool = event.getTable().getPool("mobdrops");

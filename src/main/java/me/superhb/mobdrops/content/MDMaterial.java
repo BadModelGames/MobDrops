@@ -21,7 +21,6 @@ public class MDMaterial {
 	public static final ArmorMaterial CREEPER = EnumHelper.addArmorMaterial("Creeper", "creeper", 7, new int[] { 2, 3, 3, 2 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
 	public static final ArmorMaterial WOLF = EnumHelper.addArmorMaterial("Wolf", "wolf", 6, new int[] { 1, 2, 3, 1 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
 	public static final ArmorMaterial OCELOT = EnumHelper.addArmorMaterial("Ocelot", "ocelot", 5, new int[] { 1, 2, 3 , 1 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
-	public static final ArmorMaterial MOO = EnumHelper.addArmorMaterial("Moo", "moo", 5, new int[] { 1, 2, 3, 1 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
 	public static final ArmorMaterial HORSE = EnumHelper.addArmorMaterial("Horse", "horse", 5, new int[] { 1, 2, 3, 1 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
 	public static final ArmorMaterial ENDER = EnumHelper.addArmorMaterial("Ender", "ender", 33, new int[] { 3, 8, 6, 3 }, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4);
 	public static final ArmorMaterial BLAZE = EnumHelper.addArmorMaterial("Blaze", "blaze", 25, new int[] { 3, 8, 6, 3 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2);

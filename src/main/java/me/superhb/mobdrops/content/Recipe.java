@@ -3,10 +3,30 @@ package me.superhb.mobdrops.content;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.*;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class Recipe {
 	public static void registerRecipe () {
+		// Red Dye Dec #: 10040115
+		// {display:{color:10040115}}
+		
+		ItemStack redHelmet = new ItemStack(Items.LEATHER_HELMET, 1);
+		NBTTagCompound helmetTag = redHelmet.getSubCompound("display", true);
+		helmetTag.setInteger("color", 10040115);
+		
+		ItemStack redChestplate = new ItemStack(Items.LEATHER_CHESTPLATE, 1);
+		NBTTagCompound chestplateTag = redChestplate.getSubCompound("display", true);
+		chestplateTag.setInteger("color", 10040115);
+		
+		ItemStack redLeggings = new ItemStack(Items.LEATHER_LEGGINGS, 1);
+		NBTTagCompound leggingsTag = redLeggings.getSubCompound("display", true);
+		leggingsTag.setInteger("color", 10040115);
+		
+		ItemStack redBoots = new ItemStack(Items.LEATHER_BOOTS, 1);
+		NBTTagCompound redTags = redBoots.getSubCompound("display", true);
+		redTags.setInteger("color", 10040115);
+		
 		// Crafting Table
 		GameRegistry.addRecipe(new ItemStack(MDItems.blazeShard, 2), new Object[] { " f ", "fbf", " f ", 'f', Items.FLINT, 'b', Items.BLAZE_ROD });
 		GameRegistry.addRecipe(new ItemStack(MDItems.gooSword, 1), new Object[] { "g", "g", "s", 'g', MDItems.goo, 's', Items.STICK });
@@ -27,10 +47,10 @@ public class Recipe {
 		GameRegistry.addRecipe(new ItemStack(MDItems.ocelotChestplate, 1), new Object[] { "o o", "ooo", "ooo", 'o', MDItems.ocelotFur });
 		GameRegistry.addRecipe(new ItemStack(MDItems.ocelotLeggings, 1), new Object[] { "ooo", "o o", "o o", 'o', MDItems.ocelotFur });
 		GameRegistry.addRecipe(new ItemStack(MDItems.ocelotBoots, 1), new Object[] { "o o", "o o", 'o', MDItems.ocelotFur });
-		GameRegistry.addRecipe(new ItemStack(MDItems.mooHelmet, 1), new Object[] { "rrr", "r r", 'r', MDItems.redLeather });
-		GameRegistry.addRecipe(new ItemStack(MDItems.mooChestplate, 1), new Object[] { "r r", "rrr", "rrr", 'r', MDItems.redLeather });
-		GameRegistry.addRecipe(new ItemStack(MDItems.mooLeggings, 1), new Object[] { "rrr", "r r", "r r", 'r', MDItems.redLeather });
-		GameRegistry.addRecipe(new ItemStack(MDItems.mooBoots, 1), new Object[] { "r r", "r r", 'r', MDItems.redLeather });
+		GameRegistry.addRecipe(redHelmet, new Object[] { "rrr", "r r", 'r', MDItems.redLeather });
+		GameRegistry.addRecipe(redChestplate, new Object[] { "r r", "rrr", "rrr", 'r', MDItems.redLeather });
+		GameRegistry.addRecipe(redLeggings, new Object[] { "rrr", "r r", "r r", 'r', MDItems.redLeather });
+		GameRegistry.addRecipe(redBoots, new Object[] { "r r", "r r", 'r', MDItems.redLeather });
 		GameRegistry.addRecipe(new ItemStack(MDItems.enderHelmet, 1), new Object[] { "eoe", "e e", 'e', MDItems.enderScale, 'o', Blocks.OBSIDIAN });
 		GameRegistry.addRecipe(new ItemStack(MDItems.enderChestplate, 1), new Object[] { "o o", "eoe", "eee", 'r', MDItems.enderScale, 'o', Blocks.OBSIDIAN });
 		GameRegistry.addRecipe(new ItemStack(MDItems.enderLeggings, 1), new Object[] { "eee", "o o", "e e", 'r', MDItems.enderScale, 'o', Blocks.OBSIDIAN });

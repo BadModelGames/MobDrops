@@ -25,7 +25,6 @@ import net.minecraftforge.fml.common.event.*;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod(modid = Refrence.MODID, name = Refrence.NAME, version = Refrence.VERSION)
-
 public class MobDrops {
 	@SidedProxy(clientSide = Refrence.CLIENT_PROXY_CLASS, serverSide = Refrence.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
