@@ -1,6 +1,6 @@
 package me.superhb.mobdrops.content;
 
-import me.superhb.mobdrops.Refrence;
+import me.superhb.mobdrops.Reference;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Enchantments;
@@ -18,27 +18,27 @@ public class MDArmor extends ItemArmor {
 	@Override
 	public String getArmorTexture (ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
 		if (stack.getItem() == MDItems.creeperViewHelmet)
-			return Refrence.MODID + ":textures/models/armor/creeper_view.png";
+			return Reference.MODID + ":textures/models/armor/creeper_view.png";
 		else if (stack.getItem() == MDItems.creeperHelmet || stack.getItem() == MDItems.creeperChestplate || stack.getItem() == MDItems.creeperBoots)
-			return Refrence.MODID + ":textures/models/armor/creeper_1.png";
+			return Reference.MODID + ":textures/models/armor/creeper_1.png";
 		else if (stack.getItem() == MDItems.creeperLeggings)
-			return Refrence.MODID + ":textures/models/armor/creeper_2.png";
+			return Reference.MODID + ":textures/models/armor/creeper_2.png";
 		else if (stack.getItem() == MDItems.wolfHelmet || stack.getItem() == MDItems.wolfChestplate || stack.getItem() == MDItems.wolfBoots)
-			return Refrence.MODID + ":textures/models/armor/wolf_1.png";
+			return Reference.MODID + ":textures/models/armor/wolf_1.png";
 		else if (stack.getItem() == MDItems.wolfLeggings)
-			return Refrence.MODID + ":textures/models/armor/wolf_2.png";
+			return Reference.MODID + ":textures/models/armor/wolf_2.png";
 		else if (stack.getItem() == MDItems.ocelotHelmet || stack.getItem() == MDItems.ocelotChestplate || stack.getItem() == MDItems.ocelotBoots)
-			return Refrence.MODID + ":textures/models/armor/ocelot_1.png";
+			return Reference.MODID + ":textures/models/armor/ocelot_1.png";
 		else if (stack.getItem() == MDItems.ocelotLeggings)
-			return Refrence.MODID + ":textures/models/armor/ocelot_2.png";
+			return Reference.MODID + ":textures/models/armor/ocelot_2.png";
 		else if (stack.getItem() == MDItems.enderHelmet || stack.getItem() == MDItems.enderChestplate || stack.getItem() == MDItems.enderBoots)
-			return Refrence.MODID + ":textures/models/armor/ender_1.png";
+			return Reference.MODID + ":textures/models/armor/ender_1.png";
 		else if (stack.getItem() == MDItems.enderLeggings)
-			return Refrence.MODID + ":textures/models/armor/ender_2.png";
+			return Reference.MODID + ":textures/models/armor/ender_2.png";
 		else if (stack.getItem() == MDItems.blazeHelmet || stack.getItem() == MDItems.blazeChestplate || stack.getItem() == MDItems.blazeBoots)
-			return Refrence.MODID + ":textures/models/armor/blaze_1.png";
+			return Reference.MODID + ":textures/models/armor/blaze_1.png";
 		else if (stack.getItem() == MDItems.blazeLeggings)
-			return Refrence.MODID + ":textures/models/armor/blaze_2.png";
+			return Reference.MODID + ":textures/models/armor/blaze_2.png";
 		else
 			return null;
 	}

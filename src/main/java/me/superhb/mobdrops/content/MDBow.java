@@ -1,7 +1,7 @@
 package me.superhb.mobdrops.content;
 
 import javax.annotation.Nullable;
-import me.superhb.mobdrops.Refrence;
+import me.superhb.mobdrops.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;

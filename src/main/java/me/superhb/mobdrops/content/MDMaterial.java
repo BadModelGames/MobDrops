@@ -1,6 +1,6 @@
 package me.superhb.mobdrops.content;
 
-import me.superhb.mobdrops.Refrence;
+import me.superhb.mobdrops.Reference;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;

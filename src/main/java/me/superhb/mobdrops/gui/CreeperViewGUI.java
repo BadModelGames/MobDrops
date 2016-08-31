@@ -1,6 +1,6 @@
 package me.superhb.mobdrops.gui;
 
-import me.superhb.mobdrops.Refrence;
+import me.superhb.mobdrops.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.ScaledResolution;
@@ -12,7 +12,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class CreeperViewGUI extends Gui {
 	public CreeperViewGUI (Minecraft minecraft) {
-		ResourceLocation texture = new ResourceLocation(Refrence.MODID + ":textures/gui/creeper_view_overlay.png");
+		ResourceLocation texture = new ResourceLocation(Reference.MODID + ":textures/gui/creeper_view_overlay.png");
 		ScaledResolution scaled = new ScaledResolution(minecraft);
 		int width = scaled.getScaledWidth();
 		int height = scaled.getScaledHeight();

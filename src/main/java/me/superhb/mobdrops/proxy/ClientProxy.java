@@ -1,6 +1,5 @@
 package me.superhb.mobdrops.proxy;
 
-import me.superhb.mobdrops.content.MDBlocks;
 import me.superhb.mobdrops.content.MDItems;
 import me.superhb.mobdrops.content.Recipe;
 
@@ -9,6 +8,5 @@ public class ClientProxy extends CommonProxy {
 	public void registerRenders () {
 		MDItems.registerRenders();
 		Recipe.registerRecipe();
-		//MDBlocks.registerRenders();
 	}
 }

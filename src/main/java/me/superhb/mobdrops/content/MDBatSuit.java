@@ -1,7 +1,6 @@
 package me.superhb.mobdrops.content;
 
 import javax.annotation.Nullable;
-
 import me.superhb.mobdrops.models.ModelBatSuit;
 import net.minecraft.block.BlockDispenser;
 import net.minecraft.client.model.ModelBiped;
@@ -14,6 +13,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;

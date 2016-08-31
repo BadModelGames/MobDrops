@@ -48,6 +48,7 @@ item.ender_helmet.name=Ender Scale Helmet
 item.ender_chestplate.name=Ender Scale Chestplate
 item.ender_leggings.name=Ender Scale Leggings
 item.ender_boots.name=Ender Scale Boots
+tile.fryer.name=Fryer
 item.heating_unit.name=Heating Unit
 item.frying_basket.name=Frying Basket
 item.fryer_tank.name=Tank

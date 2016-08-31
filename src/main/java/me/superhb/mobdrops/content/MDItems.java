@@ -1,7 +1,6 @@
 package me.superhb.mobdrops.content;
 
-import me.superhb.mobdrops.MobDrops;
-import me.superhb.mobdrops.Refrence;
+import me.superhb.mobdrops.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -138,68 +137,76 @@ public class MDItems {
 	
 	public static void register () {
 		// Items
-		GameRegistry.register(creeperSkin.setRegistryName(creeperSkin.getUnlocalizedName().substring(5)));
-		GameRegistry.register(wolfSkin.setRegistryName(wolfSkin.getUnlocalizedName().substring(5)));
-		GameRegistry.register(redLeather.setRegistryName(redLeather.getUnlocalizedName().substring(5)));
+		registerItem(creeperSkin, "creeper_skin");
+		registerItem(wolfSkin, "wolf_skin");
+		registerItem(redLeather, "red_leather");
 		/*
 		GameRegistry.register(batFur.setRegistryName(batFur.getUnlocalizedName().substring(5)));
 		GameRegistry.register(batEar.setRegistryName(batEar.getUnlocalizedName().substring(5)));
 		GameRegistry.register(batEye.setRegistryName(batEye.getUnlocalizedName().substring(5)));
 		GameRegistry.register(batWing.setRegistryName(batWing.getUnlocalizedName().substring(5)));
 		*/
-		GameRegistry.register(enderScale.setRegistryName(enderScale.getUnlocalizedName().substring(5)));
+		registerItem(enderScale, "ender_scale");
 		//GameRegistry.register(enderTear.setRegistryName(enderTear.getUnlocalizedName().substring(5)));
-		GameRegistry.register(goo.setRegistryName(goo.getUnlocalizedName().substring(5)));
-		GameRegistry.register(magmaGoo.setRegistryName(magmaGoo.getUnlocalizedName().substring(5)));
-		GameRegistry.register(ocelotFur.setRegistryName(ocelotFur.getUnlocalizedName().substring(5)));
-		GameRegistry.register(zombieBrain.setRegistryName(zombieBrain.getUnlocalizedName().substring(5)));
-		GameRegistry.register(blazeShard.setRegistryName(blazeShard.getUnlocalizedName().substring(5)));
+		registerItem(goo, "goo");
+		registerItem(magmaGoo, "magma_goo");
+		registerItem(ocelotFur, "ocelot_fur");
+		registerItem(zombieBrain, "zombie_brain");
+		registerItem(blazeShard, "blaze_shard");
 		//GameRegistry.register(batSuit.setRegistryName(batSuit.getUnlocalizedName().substring(5)));
 		
 		// Tools
-		GameRegistry.register(spiderLeg.setRegistryName(spiderLeg.getUnlocalizedName().substring(5)));
-		GameRegistry.register(zombieArm.setRegistryName(zombieArm.getUnlocalizedName().substring(5)));
-		GameRegistry.register(gooSword.setRegistryName(gooSword.getUnlocalizedName().substring(5)));
-		GameRegistry.register(magmaGooSword.setRegistryName(magmaGooSword.getUnlocalizedName().substring(5)));
-		GameRegistry.register(blazeSword.setRegistryName(blazeSword.getUnlocalizedName().substring(5)));
-		GameRegistry.register(blazeBow.setRegistryName(blazeBow.getUnlocalizedName().substring(5)));
+		registerItem(spiderLeg, "spider_leg");
+		registerItem(zombieArm, "zombie_arm");
+		registerItem(gooSword, "goo_sword");
+		registerItem(magmaGooSword, "magmagoo_sword");
+		registerItem(blazeSword, "blaze_sword");
+		registerItem(blazeBow, "blaze_bow");
 		
 		// Foods
-		GameRegistry.register(ham.setRegistryName(ham.getUnlocalizedName().substring(5)));
-		GameRegistry.register(bacon.setRegistryName(bacon.getUnlocalizedName().substring(5)));
-		GameRegistry.register(squidTentacle.setRegistryName(squidTentacle.getUnlocalizedName().substring(5)));
-		GameRegistry.register(calamari.setRegistryName(calamari.getUnlocalizedName().substring(5)));
-		GameRegistry.register(chickenLeg.setRegistryName(chickenLeg.getUnlocalizedName().substring(5)));
-		GameRegistry.register(cookedChickenLeg.setRegistryName(cookedChickenLeg.getUnlocalizedName().substring(5)));
-		GameRegistry.register(pigmanMeat.setRegistryName(pigmanMeat.getUnlocalizedName().substring(5)));
-		GameRegistry.register(cookedPigmanMeat.setRegistryName(cookedPigmanMeat.getUnlocalizedName().substring(5)));
-		GameRegistry.register(ribs.setRegistryName(ribs.getUnlocalizedName().substring(5)));
-		GameRegistry.register(cookedRibs.setRegistryName(cookedRibs.getUnlocalizedName().substring(5)));
-		GameRegistry.register(creeperEye.setRegistryName(creeperEye.getUnlocalizedName().substring(5)));
+		registerItem(ham, "ham");
+		registerItem(bacon, "bacon");
+		registerItem(squidTentacle, "squid_tentacle");
+		registerItem(calamari, "calamari");
+		registerItem(chickenLeg, "chicken_leg");
+		registerItem(cookedChickenLeg, "cooked_chicken_leg");
+		registerItem(pigmanMeat, "pigman_meat");
+		registerItem(cookedPigmanMeat, "cooked_pigman_meat");
+		registerItem(ribs, "ribs");
+		registerItem(cookedRibs, "cooked_ribs");
+		registerItem(creeperEye, "creeper_eye");
 		
 		// Armor
-		GameRegistry.register(creeperViewHelmet.setRegistryName(creeperViewHelmet.getUnlocalizedName().substring(5)));
-		GameRegistry.register(creeperHelmet.setRegistryName(creeperHelmet.getUnlocalizedName().substring(5)));
-		GameRegistry.register(creeperChestplate.setRegistryName(creeperChestplate.getUnlocalizedName().substring(5)));
-		GameRegistry.register(creeperLeggings.setRegistryName(creeperLeggings.getUnlocalizedName().substring(5)));
-		GameRegistry.register(creeperBoots.setRegistryName(creeperBoots.getUnlocalizedName().substring(5)));
-		GameRegistry.register(wolfHelmet.setRegistryName(wolfHelmet.getUnlocalizedName().substring(5)));
-		GameRegistry.register(wolfChestplate.setRegistryName(wolfChestplate.getUnlocalizedName().substring(5)));
+		registerItem(creeperViewHelmet, "creeper_view_helmet");
+		registerItem(creeperHelmet, "creeper_helmet");
+		registerItem(creeperChestplate, "creeper_chestplate");
+		registerItem(creeperLeggings, "creeper_leggings");
+		registerItem(creeperBoots, "creeper_boots");
+		
+		registerItem(wolfHelmet, "wolf_helmet");
+		registerItem(wolfChestplate, "wolf_chestplate");
 		//GameRegistry.register(furStole.setRegistryName(furStole.getUnlocalizedName().substring(5)));
-		GameRegistry.register(wolfLeggings.setRegistryName(wolfLeggings.getUnlocalizedName().substring(5)));
-		GameRegistry.register(wolfBoots.setRegistryName(wolfBoots.getUnlocalizedName().substring(5)));
-		GameRegistry.register(ocelotHelmet.setRegistryName(ocelotHelmet.getUnlocalizedName().substring(5)));
-		GameRegistry.register(ocelotChestplate.setRegistryName(ocelotChestplate.getUnlocalizedName().substring(5)));
-		GameRegistry.register(ocelotLeggings.setRegistryName(ocelotLeggings.getUnlocalizedName().substring(5)));
-		GameRegistry.register(ocelotBoots.setRegistryName(ocelotBoots.getUnlocalizedName().substring(5)));
-		GameRegistry.register(enderHelmet.setRegistryName(enderHelmet.getUnlocalizedName().substring(5)));
-		GameRegistry.register(enderChestplate.setRegistryName(enderChestplate.getUnlocalizedName().substring(5)));
-		GameRegistry.register(enderLeggings.setRegistryName(enderLeggings.getUnlocalizedName().substring(5)));
-		GameRegistry.register(enderBoots.setRegistryName(enderBoots.getUnlocalizedName().substring(5)));
-		GameRegistry.register(blazeHelmet.setRegistryName(blazeHelmet.getUnlocalizedName().substring(5)));
-		GameRegistry.register(blazeChestplate.setRegistryName(blazeChestplate.getUnlocalizedName().substring(5)));
-		GameRegistry.register(blazeLeggings.setRegistryName(blazeLeggings.getUnlocalizedName().substring(5)));
-		GameRegistry.register(blazeBoots.setRegistryName(blazeBoots.getUnlocalizedName().substring(5)));
+		registerItem(wolfLeggings, "wolf_leggings");
+		registerItem(wolfBoots, "wolf_boots");
+		
+		registerItem(ocelotHelmet, "ocelot_helmet");
+		registerItem(ocelotChestplate, "ocelot_chestplate");
+		registerItem(ocelotLeggings, "ocelot_leggings");
+		registerItem(ocelotBoots, "ocelot_boots");
+		
+		registerItem(enderHelmet, "ender_helmet");
+		registerItem(enderChestplate, "ender_chestplate");
+		registerItem(enderLeggings, "ender_leggings");
+		registerItem(enderBoots, "ender_boots");
+		
+		registerItem(blazeHelmet, "blaze_helmet");
+		registerItem(blazeChestplate, "blaze_chestplate");
+		registerItem(blazeLeggings, "blaze_leggings");
+		registerItem(blazeBoots, "blaze_boots");
+	}
+	
+	public static void registerItem (Item item, String name) {
+		GameRegistry.register(item.setRegistryName(name));
 	}
 	
 	public static void registerRenders () {
@@ -220,7 +227,7 @@ public class MDItems {
 		registerRender(ocelotFur);
 		registerRender(zombieBrain);
 		registerRender(blazeShard);
-		registerRender(batSuit);
+		//registerRender(batSuit);
 		
 		// Tools
 		registerRender(spiderLeg);
@@ -269,6 +276,6 @@ public class MDItems {
 	}
 	
 	public static void registerRender (Item item) {
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Refrence.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
 }

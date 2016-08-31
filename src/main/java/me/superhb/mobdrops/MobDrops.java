@@ -3,7 +3,6 @@ package me.superhb.mobdrops;
 import java.util.ArrayList;
 import java.util.List;
 import com.google.common.collect.Lists;
-import me.superhb.mobdrops.content.MDBlocks;
 import me.superhb.mobdrops.content.MDItems;
 import me.superhb.mobdrops.handler.CreeperViewHandler;
 import me.superhb.mobdrops.handler.LivingDropsHandler;
@@ -24,12 +23,12 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.*;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid = Refrence.MODID, name = Refrence.NAME, version = Refrence.VERSION)
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class MobDrops {
-	@SidedProxy(clientSide = Refrence.CLIENT_PROXY_CLASS, serverSide = Refrence.SERVER_PROXY_CLASS)
+	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
-	@Instance(Refrence.MODID)
+	@Instance(Reference.MODID)
 	public static MobDrops instance;
 	
 	public static boolean customItems;
@@ -56,7 +55,7 @@ public class MobDrops {
 				}
 				
 				public String getTranslatedTabLabel () {
-					return Refrence.NAME;
+					return Reference.NAME;
 				}
 			};
 		}
