@@ -1,14 +1,21 @@
 package me.superhb.mobdrops.content;
 
+import java.lang.reflect.Field;
+
 import me.superhb.mobdrops.Reference;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Enchantments;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.ReflectionHelper;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class MDArmor extends ItemArmor {
 	public MDArmor (ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
@@ -45,40 +52,59 @@ public class MDArmor extends ItemArmor {
 	
 	@Override
 	public void onArmorTick (World world, EntityPlayer player, ItemStack stack) {
-		if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(0) != null) {
-			ItemStack helmet = player.inventory.armorItemInSlot(3);
-			ItemStack chestplate = player.inventory.armorItemInSlot(2);
-			ItemStack leggings = player.inventory.armorItemInSlot(1);
-			ItemStack boots = player.inventory.armorItemInSlot(0);
-			
-			//if (helmet.getItem() == MDItems.blazeHelmet && chestplate.getItem() == MDItems.blazeChestplate && leggings.getItem() == MDItems.blazeLeggings && boots.getItem() == MDItems.blazeBoots)
-				//world.spawnParticle(EnumParticleTypes.SMOKE_LARGE, player.posX, player.posY + 1D, player.posZ, 0.01D, 0.01D, 0.01D, 1);
+		if (world.isRemote) {
+			if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(0) != null) {
+				ItemStack helmet = player.inventory.armorItemInSlot(3);
+				ItemStack chestplate = player.inventory.armorItemInSlot(2);
+				ItemStack leggings = player.inventory.armorItemInSlot(1);
+				ItemStack boots = player.inventory.armorItemInSlot(0);
+				
+				/*
+				if (helmet.getItem() == MDItems.blazeHelmet && chestplate.getItem() == MDItems.blazeChestplate && leggings.getItem() == MDItems.blazeLeggings && boots.getItem() == MDItems.blazeBoots) {
+					if (!helmet.isItemEnchanted() && !chestplate.isItemEnchanted() && !leggings.isItemEnchanted() && !boots.isItemEnchanted()) {
+						helmet.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
+						chestplate.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
+						leggings.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
+						boots.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
+					}
+				} else {
+					if (stack.getItem() == MDItems.blazeHelmet || stack.getItem() == MDItems.blazeChestplate || stack.getItem() == MDItems.blazeLeggings || stack.getItem() == MDItems.blazeBoots) {
+						if (stack.isItemEnchanted())
+							stack.getTagCompound().removeTag("ench");
+					}
+				}
+				*/
+				
+				//if (helmet.getItem() == MDItems.blazeHelmet && chestplate.getItem() == MDItems.blazeChestplate && leggings.getItem() == MDItems.blazeLeggings && boots.getItem() == MDItems.blazeBoots)
+					//world.spawnParticle(EnumParticleTypes.SMOKE_LARGE, player.posX, player.posY + 1D, player.posZ, 0.01D, 0.01D, 0.01D, 1);
+			}
 		}
 	}
 	
+	// ERROR: net.minecraft.entity.player.InventoryPlayer.armorItemInSlot(I)Lnet/minecraft/item/ItemStack;
 	@Override
 	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
-		if (((EntityPlayer) entityIn).inventory.armorItemInSlot(3) != null && ((EntityPlayer) entityIn).inventory.armorItemInSlot(2) != null && ((EntityPlayer) entityIn).inventory.armorItemInSlot(1) != null && ((EntityPlayer) entityIn).inventory.armorItemInSlot(0) != null) {
-			ItemStack helmet = ((EntityPlayer) entityIn).inventory.armorItemInSlot(3);
-			ItemStack chestplate = ((EntityPlayer) entityIn).inventory.armorItemInSlot(2);
-			ItemStack leggings = ((EntityPlayer) entityIn).inventory.armorItemInSlot(1);
-			ItemStack boots = ((EntityPlayer) entityIn).inventory.armorItemInSlot(0);
-			
-			if (helmet.getItem() == MDItems.blazeHelmet && chestplate.getItem() == MDItems.blazeChestplate && leggings.getItem() == MDItems.blazeLeggings && boots.getItem() == MDItems.blazeBoots) {
-				if (!helmet.isItemEnchanted() && !chestplate.isItemEnchanted() && !leggings.isItemEnchanted() && !boots.isItemEnchanted()) {
-					helmet.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
-					chestplate.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
-					leggings.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
-					boots.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
+		if (worldIn.isRemote) {
+			if (((EntityPlayer)entityIn).inventory.armorItemInSlot(3) != null && ((EntityPlayer) entityIn).inventory.armorItemInSlot(2) != null && ((EntityPlayer) entityIn).inventory.armorItemInSlot(1) != null && ((EntityPlayer) entityIn).inventory.armorItemInSlot(0) != null) {
+				ItemStack helmet = ((EntityPlayer)entityIn).inventory.armorItemInSlot(3);
+				ItemStack chestplate = ((EntityPlayer)entityIn).inventory.armorItemInSlot(2);
+				ItemStack leggings = ((EntityPlayer)entityIn).inventory.armorItemInSlot(1);
+				ItemStack boots = ((EntityPlayer)entityIn).inventory.armorItemInSlot(0);
+				
+				if (helmet.getItem() == MDItems.blazeHelmet && chestplate.getItem() == MDItems.blazeChestplate && leggings.getItem() == MDItems.blazeLeggings && boots.getItem() == MDItems.blazeBoots) {
+					if (!helmet.isItemEnchanted() && !chestplate.isItemEnchanted() && !leggings.isItemEnchanted() && !boots.isItemEnchanted()) {
+						helmet.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
+						chestplate.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
+						leggings.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
+						boots.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
+					}
+				}
+			} else {
+				if (stack.getItem() == MDItems.blazeHelmet || stack.getItem() == MDItems.blazeChestplate || stack.getItem() == MDItems.blazeLeggings || stack.getItem() == MDItems.blazeBoots) {
+					if (stack.isItemEnchanted())
+						stack.getTagCompound().removeTag("ench");
 				}
 			}
-		} else {
-			if (stack.getItem() == MDItems.blazeHelmet || stack.getItem() == MDItems.blazeChestplate || stack.getItem() == MDItems.blazeLeggings || stack.getItem() == MDItems.blazeBoots) {
-				if (stack.isItemEnchanted())
-					stack.getTagCompound().removeTag("ench");
-			}
 		}
-		
-		super.onUpdate(stack, worldIn, entityIn, itemSlot, isSelected);
 	}
 }
