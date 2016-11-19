@@ -8,9 +8,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class Recipe {
 	public static void registerRecipe () {
-		// Red Dye Dec #: 10040115
-		// {display:{color:10040115}}
-		
 		ItemStack redHelmet = new ItemStack(Items.LEATHER_HELMET, 1);
 		NBTTagCompound helmetTag = redHelmet.getSubCompound("display", true);
 		helmetTag.setInteger("color", 10040115);
