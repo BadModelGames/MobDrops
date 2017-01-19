@@ -1,19 +1,13 @@
 package me.superhb.mobdrops.content;
 
 import javax.annotation.Nullable;
-import me.superhb.mobdrops.models.ModelBatSuit;
 import net.minecraft.block.BlockDispenser;
-import net.minecraft.client.model.ModelBiped;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.IItemPropertyGetter;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
@@ -57,17 +51,4 @@ public class MDBatSuit extends ItemArmor {
         return repair.getItem() == MDItems.batFur;
     }
 
-	@Override
-    public ActionResult<ItemStack> onItemRightClick (ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
-        EntityEquipmentSlot entityequipmentslot = EntityLiving.getSlotForItemStack(itemStackIn);
-        ItemStack itemstack = playerIn.getItemStackFromSlot(entityequipmentslot);
-
-        if (itemstack == null) {
-            playerIn.setItemStackToSlot(entityequipmentslot, itemStackIn.copy());
-            itemStackIn.stackSize = 0;
-            return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
-        } else {
-            return new ActionResult(EnumActionResult.FAIL, itemStackIn);
-        }
-    }
 }

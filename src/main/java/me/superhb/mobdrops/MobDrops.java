@@ -1,27 +1,17 @@
 package me.superhb.mobdrops;
 
-import java.util.ArrayList;
-import java.util.List;
-import com.google.common.collect.Lists;
 import me.superhb.mobdrops.content.MDItems;
-import me.superhb.mobdrops.handler.CreeperViewHandler;
 import me.superhb.mobdrops.handler.LivingDropsHandler;
 import me.superhb.mobdrops.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Enchantments;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.*;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class MobDrops {
@@ -50,8 +40,8 @@ public class MobDrops {
 		
 		if (customItems) {
 			mdTab = new CreativeTabs("MobDrops") {
-				public Item getTabIconItem () {
-					return MDItems.creeperSkin;
+				public ItemStack getTabIconItem () {
+					return new ItemStack(MDItems.creeperSkin);
 				}
 				
 				public String getTranslatedTabLabel () {
