@@ -1,9 +1,5 @@
 package me.superhb.mobdrops.handler;
 
-import java.io.DataInput;
-import java.io.DataOutput;
-import java.io.IOException;
-import com.mojang.authlib.GameProfile;
 import me.superhb.mobdrops.*;
 import me.superhb.mobdrops.content.MDItems;
 import net.minecraft.entity.Entity;
@@ -180,24 +176,24 @@ public class LivingDropsHandler {
 		
 		if (event.getSource().getDamageType().equals("player") && !MobDrops.onlyBones) {
 			if (entity instanceof EntityDragon) {
-				if (entity.worldObj.rand.nextFloat() < dropRate)
+				if (entity.world.rand.nextFloat() < dropRate)
 					living.dropItem(Items.BONE, 32);
-				if (entity.worldObj.rand.nextFloat() <= 0) //Basically 100% chance
+				if (entity.world.rand.nextFloat() <= 0) //Basically 100% chance
 					living.dropItem(MDItems.enderScale, 16);
 			}
 			
 			if (entity instanceof EntityPolarBear) {
-				if (entity.worldObj.rand.nextFloat() < dropRate)
+				if (entity.world.rand.nextFloat() < dropRate)
 					living.dropItem(Items.BONE, 3);
 			}
 		} else if (event.getSource().getDamageType().equals("player") && MobDrops.onlyBones) {
 			if (entity instanceof EntityDragon) {
-				if (entity.worldObj.rand.nextFloat() < dropRate)
+				if (entity.world.rand.nextFloat() < dropRate)
 					living.dropItem(Items.BONE, 32);
 			}
 			
 			if (entity instanceof EntityPolarBear) {
-				if (entity.worldObj.rand.nextFloat() < dropRate)
+				if (entity.world.rand.nextFloat() < dropRate)
 					living.dropItem(Items.BONE, 3);
 			}
 		}

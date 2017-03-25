@@ -121,11 +121,11 @@ public class MDItems {
 		blazeBoots = new MDArmor(MDMaterial.BLAZE, 0, EntityEquipmentSlot.FEET).setUnlocalizedName("blaze_boots").setCreativeTab(tab);
 		
 		// Armor Repair Material
-		MDMaterial.CREEPER.customCraftingMaterial = creeperSkin;
-		MDMaterial.WOLF.customCraftingMaterial = wolfSkin;
-		MDMaterial.OCELOT.customCraftingMaterial = ocelotFur;
-		MDMaterial.ENDER.customCraftingMaterial = enderScale;
-		MDMaterial.BLAZE.customCraftingMaterial = blazeShard;
+		MDMaterial.CREEPER.repairMaterial = new ItemStack(creeperSkin);
+		MDMaterial.WOLF.repairMaterial = new ItemStack(wolfSkin);
+		MDMaterial.OCELOT.repairMaterial = new ItemStack(ocelotFur);
+		MDMaterial.ENDER.repairMaterial = new ItemStack(enderScale);
+		MDMaterial.BLAZE.repairMaterial = new ItemStack(blazeShard);
 		
 		// TODO Use red leather when leather armor is dyed red
 		//ArmorMaterial.LEATHER.customCraftingMaterial = redLeather;

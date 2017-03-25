@@ -9,19 +9,19 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class Recipe {
 	public static void registerRecipe () {
 		ItemStack redHelmet = new ItemStack(Items.LEATHER_HELMET, 1);
-		NBTTagCompound helmetTag = redHelmet.func_190925_c("display");
+		NBTTagCompound helmetTag = redHelmet.getOrCreateSubCompound("display");
 		helmetTag.setInteger("color", 10040115);
 		
 		ItemStack redChestplate = new ItemStack(Items.LEATHER_CHESTPLATE, 1);
-		NBTTagCompound chestplateTag = redChestplate.func_190925_c("display");
+		NBTTagCompound chestplateTag = redChestplate.getOrCreateSubCompound("display");
 		chestplateTag.setInteger("color", 10040115);
 		
 		ItemStack redLeggings = new ItemStack(Items.LEATHER_LEGGINGS, 1);
-		NBTTagCompound leggingsTag = redLeggings.func_190925_c("display");
+		NBTTagCompound leggingsTag = redLeggings.getOrCreateSubCompound("display");
 		leggingsTag.setInteger("color", 10040115);
 		
 		ItemStack redBoots = new ItemStack(Items.LEATHER_BOOTS, 1);
-		NBTTagCompound redTags = redBoots.func_190925_c("display");
+		NBTTagCompound redTags = redBoots.getOrCreateSubCompound("display");
 		redTags.setInteger("color", 10040115);
 		
 		// Crafting Table
